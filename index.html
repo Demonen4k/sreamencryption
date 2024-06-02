@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Стенд по потоковым шифрам</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="DemoNeko.png" alt="Logo">
+      <h class="logo-text">Добро пожаловать на мой интерактивный стенд для потокового шифрования!</h>
+    </div>
+    <div class="info-block">
+      <h2>Потоковые шифры</h2>
+      <p>Потоковые шифры используются для шифрования данных в потоке, в отличие от блочных шифров, которые обрабатывают данные блоками фиксированного размера.</p>
+    </div>
+    <div class="info-block">
+      <h2>Примеры потоковых шифров</h2>
+      <ul>
+        <li>RC4</li>
+        <li>Гаммирование с обратной связью</li>
+        <li>Salsa20</li>
+        <li>ChaCha20</li>
+      </ul>
+    </div>
+    <div class="info-block">
+      <h2>Шифрование и дешифрование текста с помощью RC4</h2>
+      <button id="btnRC4">RC4-Info</button>
+      <div id="infoRC4" class="info" style="display: none;">
+        <div class="rc4info">
+          <img src="rc4info.jpeg">
+        </div>
+        <p>RC4 (Rivest Cipher 4) - потоковый шифр, разработанный Рональдом Ривестом в 1987 году. Он широко применялся в протоколе безопасности WEP для защиты беспроводных сетей Wi-Fi.</p>
+      </div>
+      <form id="cryptoForm">
+        <textarea name="inputText" id="inputText" placeholder="Введите текст для шифрования или дешифрования"></textarea>
+        <textarea name="inputkey" id="key" placeholder="Введите секретный ключ"></textarea><br>
+        <button type="button" onclick="generateKey()">Сгенерировать ключ</button>
+        <button id="copyKeyButton" type="button">Копировать ключ</button><br>
+        <button type="button" onclick="encrypt()">Зашифровать</button>
+        <button type="button" onclick="decrypt()">Дешифровать</button>
+      </form>
+      <div id="outputBlock">
+        <textarea id="outputText" placeholder="Результат"></textarea>
+        <button id="copyButton">Копировать</button>
+      </div>
+    </div>
+    <div class="info-block">
+      <h2>Salsa20</h2>
+      <button id="btnSalsa20">Salsa20-Info</button>
+      <div id="infoSalsa20" class="info" style="display: none;">
+        <div class="salsa20info">
+          <img src="salsa20info.jpeg">
+        </div>
+        <p>Salsa20 - потоковый шифр, разработанный Дэниэлом Дж. Бернштейном в 2005 году. Он обладает высокой стойкостью к атакам и обеспечивает быструю скорость работы.</p>
+      </div>
+      <form id="salsaform">
+        <textarea name="salsainput" id="salsa20InputText" placeholder="Текст"></textarea>
+        <textarea name="salsa20Key" id="salsa20Key" placeholder="Ключ"></textarea>
+        <br>
+        <button id="generateSalsa20KeyButton" type="button">Сгенерировать ключ</button>
+        <button id="copyKeyButtonsalsa" type="button">Копировать ключ</button><br>
+        <button id="encryptSalsa20Button" type="button">Зашифровать</button>
+        <button id="decryptSalsa20Button" type="button">Дешифровать</button>
+        <br>
+        <textarea id="salsa20OutputText" placeholder="Результат" rows="4"></textarea>
+        <button id="copyEncryptedSalsa20TextButton" type="button">Копировать</button>
+      </form>
+    </div>
+    <div class="info-block">
+      <h2>ChaCha20</h2>
+      <button id="btnChaCha20">ChaCha-Info</button>
+      <div id="infoChaCha20" class="info" style="display: none;">
+        <div class="chacha20info">
+          <img src="chacha20info.jpeg">
+        </div>
+        <p>ChaCha20 - потоковый шифр, также разработанный Дэниэлом Дж. Бернштейном. Он является улучшенной версией Salsa20 с дополнительными механизмами безопасности.</p>
+      </div>
+      <form id="chacha20form">
+        <textarea name="chachainput" id="chacha20InputText" placeholder="Текст"></textarea>
+        <textarea name="chacha20Key" id="chacha20Key" placeholder="Ключ"></textarea>
+        <br>
+        <button id="generateChaCha20KeyButton" type="button">Сгенерировать ключ</button>
+        <button id="copyKeyButtonChaCha" type="button">Копировать ключ</button><br>
+        <button id="encryptChaCha20Button" type="button">Зашифровать</button>
+        <button id="decryptChaCha20Button" type="button">Дешифровать</button>
+        <br>
+        <textarea name="resultchacha" id="chacha20OutputText" placeholder="Результат" rows="4"></textarea>
+        <button id="copyEncryptedChaCha20TextButton" type="button">Копировать</button>
+      </form>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="social-links">
+      <a href="https://github.com/Demonen4k" target="_blank">Github</a>
+    </div>
+    <div class="contact-info">
+      <p>Email: demonen4k@yandex.ru</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+  <script src="salsa.js"></script>
+  <script src="chacha.js"></script>
+
+</body>
+</html>

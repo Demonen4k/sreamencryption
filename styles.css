@@ -1,0 +1,164 @@
+/* Общие стили */
+body {
+  background: linear-gradient(to bottom right, #f3cfe8, #bbdefb); /* Нежный розовый градиент */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Минимальная высота экрана */
+  position: relative; /* Позиция относительно обертки */
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон */
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень */
+  margin-bottom: 200px;
+}
+
+.logo {
+  position: relative; /* Относительное позиционирование */
+  margin-bottom: 100px;
+}
+
+.logo img {
+  position: absolute; /* Абсолютное позиционирование */
+  top: 0; /* Отступ сверху */
+  left: 0; /* Отступ слева */
+  width: 100px; /* Ширина логотипа */
+  height: auto; /* Автоматическая высота */
+}
+
+.logo-text {
+  position: absolute; /* Абсолютное позиционирование */
+  top: 0; /* Отступ сверху */
+  left: 120px; /* Отступ слева (на ваше усмотрение) */
+  font-weight: bold; /* Жирный шрифт */
+  font-size: 30px; /* Размер шрифта */
+  text-align: center; /* Центрирование текста */
+  width: calc(100% - 120px); /* Ширина текста (вычисляемая) *//
+}
+
+/* Для устройств с шириной экрана от 768px до 1024px (например, планшеты) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .logo-text {
+    font-size: 20px; /* Уменьшаем размер текста для планшетов */
+  }
+}
+
+/* Для устройств с шириной экрана меньше 768px (например, смартфоны) */
+@media screen and (max-width: 767px) {
+  .logo-text {
+    font-size: 16px; /* Уменьшаем размер текста для мобильных устройств */
+  }
+}
+
+
+.info-block {
+  margin-top: 20px; /* Добавляем верхний отступ */
+  padding: 20px;
+  border-radius: 10px;
+  background: linear-gradient(to bottom right, #64b5f6, #2196f3); /* Голубой градиент */
+}
+
+.info {
+  position: relative;
+}
+
+.info img {
+  width: 80%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.salsa20info {
+  position: relative;
+}
+
+.salsa20info img {
+  width: 50%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.chacha20info {
+  position: relative;
+}
+
+.chacha20info img {
+  width: 80%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+
+h2 {
+  color: white;
+  margin-top: 0;
+}
+p, ul {
+  color: white;
+}
+textarea, button {
+  margin-bottom: 10px;
+}
+
+/* Для устройств с шириной экрана до 768px (например, смартфоны) */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%; /* Уменьшаем ширину контейнера */
+  }
+}
+
+/* Для устройств с шириной экрана от 769px до 1024px (например, планшеты) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    width: 80%; /* Уменьшаем ширину контейнера */
+  }
+}
+
+/* Для устройств с шириной экрана больше 1024px (например, десктопы) */
+@media screen and (min-width: 1025px) {
+  .container {
+    width: 60%; /* Уменьшаем ширину контейнера */
+  }
+}
+
+.footer {
+  background: linear-gradient(to bottom right, #f3cfe8, #bbdefb);
+  position: absolute; /* Фиксированная позиция */
+  bottom: 0; /* Прижимаем к нижнему краю */
+  width: 100%; /* Ширина по всей ширине */
+  background-color: #f4f4f4; /* Цвет фона */
+  padding: 20px; /* Отступы */
+  text-align: center; /* Центрирование текста */
+}
+
+.contact-info p {
+  color: black;
+}
+
+.social-links a {
+  font-size: 20px;
+  color: blueviolet;
+}
+
+textarea,
+input[type="text"],
+button {
+    width: 100%;
+    max-width: calc(100% - 20px); /* ширина контейнера минус отступы */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #007700; /* зеленая рамка */
+    border-radius: 5px; /* закругленные углы */
+}
